@@ -1,5 +1,4 @@
-const arr = [1, 2, 3, 4, 5];
-const increasingArray = [1, 2, 3, 4, 5];
+let arr = [3, 451, 5, 2, 6, 76, 3, 5, 1, 243, 6, 4]
 function inramanhinh(arr) { //cau a//
     for (i = 0; i<arr.length; i++) {
         console.log("phần tử thứ", i+1,":", arr[i])
@@ -38,13 +37,6 @@ function trungbinhcong(arr) { //cau d//
 console.log("trung bình cộng là", trungbinhcong(arr))
 
 
-// function daonguoc(arr) { //cau e//
-//     const reversed = arr.reverse()
-//     return reversed
-// }
-
-// console.log(daonguoc(arr))
-
 function solanxuathien(x) { // cau f//
     let xuathien = 0
     for (let i = 0;i<arr.length;i++) {
@@ -58,22 +50,38 @@ for (i = 0;i <arr.length;i++) {
     console.log(solanxuathien(arr[i]))
 }
 
-
-// function themphantu(arr) { // cau g//
-//     arr.unshift(177);
-//     return arr
-// } 
-// console.log(themphantu(arr))
+function ascending(arr) { //cau k + i//
+    let ascendingarr = arr.sort((a, b) => a - b);
+    return ascendingarr
 
 
-function isIncreasing(x) {
-    for (let i = 1; i < x.length; i++) {
-      if (x[i] <= x[i - 1]) {
-        return false; 
-      }
+}
+console.log(ascending(arr))
+
+function descending(arr) {
+    let descendingarr = arr.sort((a, b) => b - a);
+    return descendingarr
+}
+console.log(descending(arr))
+
+function sochan(arr) { //cau m//
+    let chan = []
+    for(i = 0;i<arr.length;i++) {
+        if (arr[i]%2==0) {
+            chan.push(arr[i])
+        }
     }
-    return true;
-  }
+    return chan
+}
+function sole(arr) { //cau n//
+    let le = []
+    for(i = 0;i<arr.length;i++) {
+        if (arr[i]%2!=0) {
+            le.push(arr[i])
+        }
+    }
+    return le
 
-  
-  console.log(isIncreasing(arr));  
+}
+console.log(sochan(arr))
+console.log(sole(arr))
