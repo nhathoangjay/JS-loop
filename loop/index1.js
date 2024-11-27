@@ -21,8 +21,6 @@ function lonnhatbenhat(arr) { // cau c//
         if (arr[i] > lonnhat) {
             lonnhat = arr[i]
         }
-    }
-    for (i=arr.length-1; i>=0;i--) {
         if (arr[i] < benhat) {
             benhat = arr[i]
         }
