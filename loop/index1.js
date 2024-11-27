@@ -16,7 +16,7 @@ function tong(arr) { //cau b//
 console.log("tong la", tong(arr))
 function lonnhatbenhat(arr) { // cau c//
     let lonnhat = arr[0]
-    let benhat = arr[arr.length-1]
+    let benhat = arr[0]
     for (i = 0; i<arr.length;i++) {
         if (arr[i] > lonnhat) {
             lonnhat = arr[i]
